@@ -427,7 +427,7 @@ func (g *Generator) pipInstalls() (string, error) {
 
 	return strings.Join([]string{
 		copyLine[0],
-		"RUN pip install -r " + containerPath,
+		"RUN pip install -r " + containerPath + " -i https://pypi.tuna.tsinghua.edu.cn/simple/ ",
 	}, "\n"), nil
 }
 
